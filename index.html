@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSolutions Pro - Professional Services</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">TechSolutions Pro</a>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                    <li><a href="#" class="nav-link" data-page="services">Services</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <div class="page active" id="home">
+            <section class="hero">
+                <div class="hero-container">
+                    <h1>Professional Tech Solutions</h1>
+                    <p>Empowering businesses with cutting-edge technology and innovative solutions for the digital age.</p>
+                    <a href="#" class="btn" onclick="showPage('services')">Our Services</a>
+                    <a href="#" class="btn btn-secondary" onclick="showPage('contact')">Get in Touch</a>
+                </div>
+            </section>
+
+            <section class="section stats">
+                <div class="container">
+                    <div class="stats-grid" id="statsGrid">
+                        <!-- Stats will be loaded dynamically -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Why Choose Us?</h2>
+                    <div class="grid grid-3" id="featuresGrid">
+                        <!-- Features will be loaded dynamically -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- About Page -->
+        <div class="page" id="about">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">About TechSolutions Pro</h2>
+                    <p class="section-subtitle">We are a team of passionate professionals dedicated to delivering exceptional technology solutions that drive business growth and innovation.</p>
+                    
+                    <div class="grid grid-2 mb-2">
+                        <div class="card">
+                            <h3>Our Mission</h3>
+                            <p>To empower businesses with innovative technology solutions that streamline operations, enhance productivity, and drive sustainable growth in the digital era.</p>
+                        </div>
+                        <div class="card">
+                            <h3>Our Vision</h3>
+                            <p>To be the leading technology partner that transforms how businesses operate, making advanced solutions accessible to organizations of all sizes.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="section-title">Meet Our Team</h3>
+                    <div class="grid grid-3" id="teamGrid">
+                        <!-- Team members will be loaded dynamically -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Services Page -->
+        <div class="page" id="services">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Our Services</h2>
+                    <p class="section-subtitle">Comprehensive technology solutions tailored to meet your business needs and drive digital transformation.</p>
+                    <div class="grid grid-3" id="servicesGrid">
+                        <!-- Services will be loaded dynamically -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contact Page -->
+        <div class="page" id="contact">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Get in Touch</h2>
+                    <p class="section-subtitle">Ready to transform your business? Contact us today for a consultation.</p>
+                    
+                    <div class="grid grid-2">
+                        <div class="card">
+                            <h3>Contact Information</h3>
+                            <div class="contact-info">
+                                <p><strong>📍 Address:</strong><br>123 Tech Street, Mumbai City, DC 12345</p>
+                                <p><strong>📞 Phone:</strong><br>+91 (555) 123-4567</p>
+                                <p><strong>✉️ Email:</strong><br>info@techsolutionspro.com</p>
+                                <p><strong>🕒 Business Hours:</strong><br>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <h3>Send us a Message</h3>
+                            <div class="success-message" id="successMessage">
+                                Thank you! Your message has been sent successfully.
+                            </div>
+                            <form id="contactForm" novalidate>
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Full Name *</label>
+                                    <input type="text" id="name" name="name" class="form-input" required>
+                                    <div class="error-message" id="nameError"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                    <div class="error-message" id="emailError"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject" class="form-label">Subject *</label>
+                                    <input type="text" id="subject" name="subject" class="form-input" required>
+                                    <div class="error-message" id="subjectError"></div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Message *</label>
+                                    <textarea id="message" name="message" class="form-textarea" required></textarea>
+                                    <div class="error-message" id="messageError"></div>
+                                </div>
+                                
+                                <button type="submit" class="btn" id="submitBtn">
+                                    <span id="btnText">Send Message</span>
+                                    <span class="loading hidden" id="btnLoading"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TechSolutions Pro. All rights reserved. | Developed By Aftab Shaikh</p>
+        </div>
+    </footer>
+
+    <script src="index.js">
+    </script>
+</body>
+</html>
