@@ -5,7 +5,7 @@ A professional and responsive multi-page website .
 ## 🚀 Features
 - **Frontend**: HTML, CSS, SCSS, JavaScript  
 - **Dynamic Content**: Rendered from JSON objects  
-- **Backend**: PHP (basic integration for contact form)  
+- **Backend**: PHP ( integration for contact form)  
 - **Database**: MySQL (stores contact form submissions)  
 
 ## 📂 Pages
